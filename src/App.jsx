@@ -2,18 +2,36 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './Todo'
+
 
 function App() {
 
   return (
     <>
 
-      <h1>Vite</h1> 
+      <h3>Vite+React</h3> 
+      <Todo
+       task = 'Learn react' isDone={true}></Todo>
+      <Todo 
+      task = 'Core concepts' isDone={false}></Todo>
+      <Todo 
+      task = 'Try JSX' isDone={true}></Todo>
+      {/* <Device name= "Laptop" price="55"></Device>
+      <Device name= "Mobile" price="17"></Device>
+      <Device name= "Watch" price="3"></Device>
        <Person></Person>
+       <Student grade="7" score= "99"></Student>
+       <Student grade= {12} score= "85"></Student>
        <Student></Student>
-       <Developer></Developer>
+       <Developer></Developer> */}
     </>
   )
+}
+
+function Device(props) {
+  // console.log (props)
+  return <h2>This Device:{props.name} price:{props.price}</h2>
 }
 
 function Person() {
@@ -22,12 +40,15 @@ function Person() {
   const person = {name: "sakib", age: 12}
   return <h3>I am {person.name} with age:{age+money}</h3>
 }
-function Student() {
+const {grade, score} = {grade:"7", score: "99"}
+function Student({grade=1, score=0}) {
+  console.log(grade, score);
+
   return (
      <div className= "student"> 
     <h3>This is a Student</h3>
-    <p>Name:</p>
-    <p>Age:</p>
+    <p>Class: {grade}</p>
+    <p>score: {score}</p>
   </div>
   )
  
