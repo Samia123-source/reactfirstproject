@@ -55,17 +55,17 @@
 // }
 
 // Conditional Rendering option:2
-   export default function Todo({task, isDone}){
-    let listItem;
-  if(isDone){
-    listItem = <li>Finished: {task}</li>
+//    export default function Todo({task, isDone}){
+//     let listItem;
+//   if(isDone){
+//     listItem = <li>Finished: {task}</li>
         
-    }
-    else{
-      listItem = <li>Worked on: {task}</li>
-    }
-return listItem;
-    } 
+//     }
+//     else{
+//       listItem = <li>Worked on: {task}</li>
+//     }
+// return listItem;
+//     } 
 
 
 
