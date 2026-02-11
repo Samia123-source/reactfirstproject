@@ -2,9 +2,16 @@
 import './App.css'
 import Actor from './Actor'
 import Singer from './Singer'
+import BookStore from './BookStore'
 
 
 function App() {
+  const books=[
+    {id:1, name:'Physics', Price:100},
+    {id:2, name:'Math', Price:120},
+    {id:3, name:'Chemistry', Price:100},
+    {id:4, name:'Biology', Price:100}
+  ]
 
   const actors = ['Sakib', 'Shariful Raj', 'Jasim', 'Rubel'];
   const singers = [
@@ -18,6 +25,7 @@ function App() {
     <>
 
       <h3>Vite+React</h3> 
+      <BookStore books ={books}></BookStore>
       {
         singers.map(singer => <Singer singer={singer}></Singer>)
       }
